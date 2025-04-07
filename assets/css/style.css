@@ -13,6 +13,11 @@ body {
 * {
   box-sizing: border-box;
 }
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 15px 100px;
+  }
+}
 hr {
   display: none;
 } /* rimuove l'elemento */
@@ -49,7 +54,40 @@ header nav li a:hover {
 header nav li a::before {
   content: "\22c6\0020";
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 1rem 0rem;
+  }
+  header div img {
+    margin-inline: 2rem;
+    vertical-align: middle;
+    margin-bottom: unset;
+  }
+  header div {
+    text-align: left;
+    display: inline-block;
+    width: 49%;
+  }
+  header div p {
+    font-size: 1.6rem;
+    margin-bottom: unset;
+    display: inline-block;
+  }
+  header nav {
+    text-align: right;
+    display: inline-block;
+    width: 49%;
+  }
+  header nav ul {
+    width: 95%;
+  }
+  header nav li {
+    font-size: 1.6rem;
+    margin-inline: 1rem;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 768px) {
   header nav li {
     display: inline-block;
     margin: 0 5px;
@@ -59,13 +97,13 @@ header nav li a::before {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 425px) {
   header nav li {
     display: inline-block;
     margin: 0 5px;
   }
   img {
-    width: 150px;
+    width: 160px;
   }
 }
 
@@ -76,12 +114,18 @@ main {
   padding: 2em 1em;
   margin-bottom: 1.5em;
 }
+@media screen and (min-width: 1200px) {
+  main {
+    padding: 2em 2em;
+  }
+}
 section {
   background-color: #e3e3e3;
   padding: 1em;
   margin-bottom: 2em;
 }
 section h2 {
+  background-color: #a3a3a3;
   text-align: center;
   color: #333;
   font-size: 2rem;
@@ -97,12 +141,13 @@ h1 {
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   h1 {
+    width: 60%;
     font-size: 4.6rem;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 425px) {
   h1 {
     font-size: 3.6rem;
   }
@@ -111,7 +156,7 @@ h1 {
 .badge {
   width: 66px;
   height: 66px;
-  margin: 0;
+  margin-bottom: 5px;
   border: 3px solid #a12572;
 }
 .badge img {
@@ -156,13 +201,13 @@ iframe {
 }
 
 /* TABELLE */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .tabella {
     padding: 80px 0px;
   }
   .tabella table {
-    width: 500px;
-    margin: 0 auto;
+    width: 60%;
+    margin: auto;
   }
 }
 table {
@@ -207,7 +252,14 @@ button {
   color: white;
   font-weight: bold;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
+  article section {
+    display: inline-block;
+    width: 49%;
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
   input {
     width: 400px;
     height: 40px;
@@ -238,9 +290,35 @@ aside div p:last-child {
   font-size: 0.8em;
   text-align: right;
 }
+@media screen and (min-width: 768px) {
+  section p {
+    font-size: 1.7rem;
+    max-width: 80%;
+  }
+}
 @media screen and (max-width: 768px) {
   aside h2 {
     font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  iframe {
+    vertical-align: bottom;
+    width: 49%;
+    height: 190px;
+    display: inline-block;
+  }
+  input {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  aside h2 {
+    font-size: 3rem;
+  }
+  aside div {
+    width: 33%;
+    display: inline-block;
   }
 }
 
@@ -256,4 +334,15 @@ footer {
 }
 footer a {
   color: fuchsia;
+}
+@media screen and (min-width: 1200px) {
+  footer {
+    font-size: 1.8rem;
+    padding: 2rem;
+  }
+  footer address {
+    display: inline-block;
+
+    width: 700px;
+  }
 }
